@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spreadsheet Prophet</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Spreadsheet Prophet</h1>
+    <p class="tagline">Upload a CSV and get a past / present / future forecast narrative.</p>
+  </header>
+
+  <main class="container">
+    <section class="card upload-card" aria-labelledby="upload-heading">
+      <h2 id="upload-heading">Upload a CSV</h2>
+
+      <form id="upload-form" class="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="csv-file">CSV file</label>
+        <input type="file" id="csv-file" name="file" accept=".csv,text/csv" required>
+
+        <p class="hint">
+          Use a comma-separated file with a header row. Numeric columns are selected automatically
+          for forecasting, anomaly checks, and the betrayal-metric flag.
+        </p>
+
+        <button type="submit" class="button">Forecast</button>
+      </form>
+    </section>
+
+    <section class="card instructions" aria-labelledby="instructions-heading">
+      <h2 id="instructions-heading">How it works</h2>
+      <ol>
+        <li>Choose a CSV file with at least one numeric column.</li>
+        <li>Spreadsheet Prophet infers column types, likely units, and anomalies.</li>
+        <li>Review the past, present, and future cards, confidence bands, and betrayal-metric flag.</li>
+        <li>Export the forecast plot or result view as PDF or image.</li>
+      </ol>
+    </section>
+
+    <section class="card tips" aria-labelledby="tips-heading">
+      <h2 id="tips-heading">Tips</h2>
+      <ul>
+        <li>Keep one row per observation and include a date or index column when possible.</li>
+        <li>Dense numeric columns produce stronger forecasts and clearer confidence bands.</li>
+        <li>Use the export controls on the result page to save the plot or full result.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Spreadsheet Prophet — a small forecast narrative tool for CSV data.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>
