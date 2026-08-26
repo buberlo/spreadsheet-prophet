@@ -1,0 +1,16 @@
+# Spreadsheet Prophet — pinned dependencies
+# Python >= 3.10
+
+# --- Web framework ---
+Flask==3.0.3
+
+# --- Data analysis & inference ---
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.13.1
+
+# --- Plotting & export (PDF / PNG) ---
+matplotlib==3.8.4
+
+# --- Testing ---
+pytest==8.2.2
