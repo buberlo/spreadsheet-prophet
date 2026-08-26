@@ -1,0 +1,89 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+virtualenv/
+.python-version
+
+# Test, type-check, and lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.tox/
+.nox/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Flask / app runtime files
+/instance/
+/tmp/
+/var/
+*.log
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Uploaded files
+/uploads/*
+!uploads/.gitkeep
+/data/uploads/*
+!data/uploads/.gitkeep
+/static/uploads/*
+!static/uploads/.gitkeep
+/spreadsheet_prophet/uploads/*
+!spreadsheet_prophet/uploads/.gitkeep
+
+# Generated exports and plots
+/exports/*
+!exports/.gitkeep
+/output/*
+!output/.gitkeep
+/static/exports/*
+!static/exports/.gitkeep
+/static/plots/*
+!static/plots/.gitkeep
+/spreadsheet_prophet/exports/*
+!spreadsheet_prophet/exports/.gitkeep
+/spreadsheet_prophet/output/*
+!spreadsheet_prophet/output/.gitkeep
+
+# Generated export artifacts
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.webp
